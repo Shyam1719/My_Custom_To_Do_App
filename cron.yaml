@@ -1,13 +1,13 @@
 cron:
   - name: "Add Default Tasks"
-    schedule: "0 0 * * *"
+    schedule: "0 0 * * *"  # Daily at 12:00 AM
     command: "php scripts/add_default_tasks.php"
   - name: "Send Pending Tasks Email"
-    schedule: "0 21 * * *"
+    schedule: "0 21 * * *"  # Daily at 9:00 PM
     command: "php scripts/send_pending_tasks_email.php"
   - name: "Send Monthly Report"
-    schedule: "55 23 28-31 * *"
+    schedule: "55 23 28-31 * *"  # Last day of the month at 11:55 PM
     command: "php scripts/send_monthly_report.php"
   - name: "Delete Completed Tasks"
-    schedule: "0 0 1 * *"
+    schedule: "0 0 1 * *"  # First day of every month at 12:00 AM
     command: "php scripts/delete_completed_tasks.php"
