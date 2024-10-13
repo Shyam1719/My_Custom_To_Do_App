@@ -1,0 +1,13 @@
+cron:
+  - name: "Add Default Tasks"
+    schedule: "0 0 * * *"
+    command: "php scripts/add_default_tasks.php"
+  - name: "Send Pending Tasks Email"
+    schedule: "0 21 * * *"
+    command: "php scripts/send_pending_tasks_email.php"
+  - name: "Send Monthly Report"
+    schedule: "55 23 28-31 * *"
+    command: "php scripts/send_monthly_report.php"
+  - name: "Delete Completed Tasks"
+    schedule: "0 0 1 * *"
+    command: "php scripts/delete_completed_tasks.php"
